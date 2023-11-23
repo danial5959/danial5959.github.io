@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page with Background Image</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .background-image {
+            background-image: url('1.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            height: 100%;
+            display: flex;
+            align-items: center; /* This vertically centers the content */
+            justify-content: center; /* This horizontally centers the content */
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .gold-button {
+            background-color: #ffd700; /* Gold color */
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none; /* Removes underline from text */
+            display: inline-block; /* Aligns button properly within the anchor tag */
+        }
+
+        .gold-button:hover {
+            background-color: #d4af37; /* Darker shade of gold for hover effect */
+        }
+    </style>
+</head>
+<body>
+
+<div class="background-image">
+    <div class="content">
+        <h1>Welcome to My Website</h1>
+        <p>Lets see my CV</p>
+        <a href="cv.html" class="gold-button">Let's Go</a> <!-- Gold Button -->
+        <!-- Add more content here -->
+    </div>
+</div>
+
+</body>
+</html>

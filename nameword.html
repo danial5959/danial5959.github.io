@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive User Input</title>
+    <script>
+        function showFullName() {
+            var firstName = document.getElementById('first-name').value;
+            var lastName = document.getElementById('last-name').value;
+            document.getElementById('full-name').innerText = firstName + ' ' + lastName;
+        }
+
+        function countWords() {
+            var text = document.getElementById('word-count-input').value;
+            var words = text.split(/\s+/).filter(function(word) {
+                return word.length > 0;
+            });
+            document.getElementById('word-count').innerText = 'Word count: ' + words.length;
+        }
+    </script>
+</head>
+<body>
+
+<h2>Enter Your Name</h2>
+<p>First Name: <input type="text" id="first-name" oninput="showFullName()"></p>
+<p>Last Name: <input type="text" id="last-name" oninput="showFullName()"></p>
+<p>Full Name: <span id="full-name"></span></p>
+
+<h2>Word Count in Text</h2>
+<p>Enter text: <textarea id="word-count-input" oninput="countWords()"></textarea></p>
+<p><span id="word-count">Word count: 0</span></p>
+
+</body>
+</html>
